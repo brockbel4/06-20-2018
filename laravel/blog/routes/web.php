@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/about', function () {
+    $site_title = "About Brock";
+
+    return view('about', compact('site_title'));
+});
